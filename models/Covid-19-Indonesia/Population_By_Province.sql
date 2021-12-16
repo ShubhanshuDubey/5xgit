@@ -8,7 +8,8 @@ WITH Population AS
     )
 
 
-,Total_Deaths AS
+,
+Total_Deaths AS
 (
     SELECT * FROM {{ ref('TotalDeathsByProvince') }}
 )
