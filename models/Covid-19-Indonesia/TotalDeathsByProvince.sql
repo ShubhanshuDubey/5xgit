@@ -1,6 +1,10 @@
+{{config(
+    materialised="table"
+)}}
+
 WITH total_deaths_by_province AS
 (
-    SELECT  distinct province
+    SELECT  distinct province, case_fatality_rate As Death_Rate, date
     FROM FIVETRAN_INTERVIEW_DB.GOOGLE_SHEETS.COVID_19_INDONESIA_SHUBHANSHU_DUBEY
     WHERE province IS NOT NULL
     
@@ -10,6 +14,7 @@ WITH total_deaths_by_province AS
         SELECT distinct province, SUM(total_deaths) as Total_Deaths
         FROM FIVETRAN_INTERVIEW_DB.GOOGLE_SHEETS.COVID_19_INDONESIA_SHUBHANSHU_DUBEY
         group by Province
+        
     
     )
 
