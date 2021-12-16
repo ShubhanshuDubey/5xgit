@@ -1,0 +1,7 @@
+
+version: 2
+
+models:
+    - name: Covid-19-Indonesia
+      description: "A starter dbt model"
+      materilaized: 'table'

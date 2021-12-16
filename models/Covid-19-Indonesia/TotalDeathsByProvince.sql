@@ -1,3 +1,7 @@
+{{config(
+    materialised="table"
+    )}}
+
 WITH total_deaths_by_province AS
 (
     SELECT  distinct province

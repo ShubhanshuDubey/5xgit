@@ -1,3 +1,5 @@
+
+
 WITH Population AS
     (
         SELECT DISTINCT province,Population_Density
