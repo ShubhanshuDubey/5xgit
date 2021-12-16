@@ -35,6 +35,6 @@ models:
   Covid-19-Indonesia:
     # Applies to all files under models/example/
     TotalDeathsByProvince:
-      materialized: view
+      materialized: table
     PoplationByProvince:
-      materialized: view
+      materialized: table
